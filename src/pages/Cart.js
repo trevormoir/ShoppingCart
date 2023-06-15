@@ -12,7 +12,7 @@ export const Cart = ({cart, setCart}) => {
   return (
     <main>
       <section className="cart">
-        <h1>Cart Items: {cart.length}</h1>
+        <h1>Cart Items: {cart.length} {cart.length > 0 ? `/ $${cart.map(item => parseInt(item.price) * parseInt(item.qty)).reduce((prev, next) => prev + next)}` : ""}</h1>
         { cart.map((product) => (
           <CartCard key={product.id} product={product} cart={cart} setCart={setCart} />
         )) }        
