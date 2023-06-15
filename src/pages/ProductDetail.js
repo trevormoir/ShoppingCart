@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 // import { useTitle } from "../hooks/useTitle";
 // import { useFetch } from "../hooks/useFetch";
@@ -13,7 +13,7 @@ export const ProductDetail = ({products}) => {
 
     //useTitle(products.name);
     useEffect(() => {
-      document.title = products ? `${product.name} | Shopping Cart` : "Shopping Cart";
+      document.title = product ? `${product.name} | Shopping Cart` : "Shopping Cart";
     },[product]);
 
     return (
