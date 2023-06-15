@@ -6,8 +6,9 @@ import { useFetch } from "../hooks/useFetch";
 export const ProductDetail = () => {
   const params = useParams();
   console.log(params.id);
-    const [url, setUrl] = useState(`http://localhost:8000/products/${params.id}`);
-    const { data: products, loading, error } = useFetch(url, { contect: 'ABC'});
+    //use if using json server
+    //const [url, setUrl] = useState(`http://localhost:8000/products/${params.id}`);
+    //const { data: products, loading, error } = useFetch(url, { contect: 'ABC'});
     
     //useTitle(products.name);
     useEffect(() => {
